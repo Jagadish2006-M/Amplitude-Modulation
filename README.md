@@ -76,10 +76,25 @@ Compare the original modulating signal with the demodulated signal. PROCEDURE
 
 Program
 
-
+Am=6.1;
+fm=471;
+Ac=12.2;
+fc=4710;
+fs=47100;
+t=0:1/fs:2/fm;
+m=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,m);
+c=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,c);
+s=(Ac+m).*cos(2*3.14*fc*t);
+subplot(3,1,3);
+plot(t,s);
 
 Output Waveform
 
+<img width="1919" height="1199" alt="EXP 1 212224060101" src="https://github.com/user-attachments/assets/009e60d1-c39c-40e0-a946-f754d5cb2a46" />
 
 
 
